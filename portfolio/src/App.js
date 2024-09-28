@@ -4,10 +4,9 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Acms from "./pages/Acms";
-
 function App() {
   return (
-   <div>
+    <div>
     <BrowserRouter>
     <Routes>
     
