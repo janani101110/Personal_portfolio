@@ -1,0 +1,276 @@
+/* Main container */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #F5E8F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Shapes for decoration */
+  .shape1, .shape2, .shape3 {
+    position: absolute;
+    background: #e9a5c0;
+    border-radius: 99%;
+    transform: rotate(35.06deg);
+    box-shadow: 0px 8px  18px #dcb7c5;
+  }
+  
+  /* Shape sizes and positions */
+  .shape1, .shape2, .shape3 {
+    width: 15vw; /* Use viewport width for scaling */
+    height: 24vh; /* Use viewport height */
+  }
+  
+  .shape1 {
+    left: 15%;
+    top: 36%;
+  }
+  
+  .shape2 {
+    left: 22%;
+    top: 32%;
+  }
+  
+  .shape3 {
+    left: 11%;
+    top: 53%;
+  }
+  
+  /* Welcome text styling */
+  .welcome-text {
+    position: absolute;
+    left: 62%;
+    z-index: 1;
+  }
+  
+  .welcome {
+    font-size: 2vw; /* Scale font size with screen width */
+    color: #0e0e0e;
+    font-family: 'Oleo Script', system-ui;
+  }
+  
+  .name {
+    font-size: 3vw;
+    color: #090909;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 0.5rem;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  
+  .name {
+    font-family: monospace;
+    overflow: hidden;
+    border-right: 2px solid black;
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  }
+  
+  /* Button */
+  .know-button {
+    width: 15vw;
+    height: 8vh;
+    margin-top: 1.5rem;
+    font-size: 1.5vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #000000;
+    background-color: rgba(219, 112, 231, 0.7);
+    box-shadow: 0px 0px 5px rgba(166, 113, 178, 0.7), 0px 0px 25px rgba(122, 50, 144, 0.7);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .know-button:hover {
+    background-color: #a22a8c;
+    color: antiquewhite;
+    box-shadow: 0px 0px 10px rgba(144, 50, 128, 0.9), 0px 0px 30px rgba(122, 50, 144, 0.9);
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 12vw;
+    margin-top: 10em;
+    position: absolute;
+    z-index: 1;
+    left: 64%;
+    cursor: pointer;
+    font-size: 28px;
+    text-decoration: none;
+  }
+  
+  .social-icons svg:hover {
+    color: #7A2AA2 !important;
+  }
+  
+  /* Profile picture */
+  .profile-picture {
+    width: 20vw;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Responsive media queries */
+  @media (max-width: 768px) {
+    .profile-picture {
+        width: 25vw;
+    }
+  
+    .shape1, .shape2, .shape3 {
+        width: 8vw;
+        height: 12vh;
+    }
+  
+    .welcome {
+        font-size: 3vw;
+    }
+  
+    .name {
+        font-size: 4vw;
+    }
+  
+    .know-button {
+        width: 20vw;
+        height: 7vh;
+        font-size: 2.5vw;
+        box-shadow: 0px 0px 3px rgba(122, 50, 144, 0.7), 0px 0px 15px rgba(122, 50, 144, 0.7);
+    }
+  
+    .social-icons {
+        width: 10vw;
+        font-size: 20px;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 15rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .profile-picture {
+        width: 30vw;
+        top: 25%;
+        left: 50%;
+    }
+  
+    .shape1, .shape2, .shape3 {
+        width: 15vw;
+        height: 18vh;
+    }
+    .shape1 {
+      left: 50%;
+      top: 14%;
+    }
+    
+    .shape2 {
+      left: 32%;
+      top:16%;
+    }
+    
+    .shape3 {
+      left: 30%;
+      top:20%;
+    }
+    .welcome-text{
+      left:35%;
+      text-align: center;
+    }
+  
+    .welcome {
+        font-size: 4vw;
+    }
+  
+    .name {
+        font-size: 5vw;
+    }
+  
+    .know-button {
+        width: 26vw;
+        height: 6vh;
+        font-size: 3vw;
+        box-shadow: 0px 0px 2px rgba(122, 50, 144, 0.7), 0px 0px 10px rgba(122, 50, 144, 0.7);
+    }
+  
+    .social-icons {
+       width: 7vw; /* Increase width for smaller screens */
+        margin-top: 13rem;
+        font-size: 16;
+        left: 36%;
+  }}
+  
+  /* For very small mobile devices (up to 320px wide) */
+  @media (max-width: 320px) {
+    .profile-picture {
+        width: 40vw; /* Increase width for smaller screens */
+    }
+  
+    .shape1, .shape2, .shape3 {
+      width: 15vw;
+      height: 18vh;
+  }
+  .shape1 {
+    left: 50%;
+    top: 14%;
+  }
+  
+  .shape2 {
+    left: 32%;
+    top:16%;
+  }
+  
+  .shape3 {
+    left: 30%;
+    top:20%;
+  }
+  
+    .welcome {
+        font-size: 5vw; /* Adjust font size */
+    }
+  
+    .name {
+        font-size: 6vw; /* Adjust font size */
+    }
+  
+    .know-button {
+        width: 30vw; /* Increase button width */
+        height: 5vh; /* Reduce button height */
+        font-size: 4vw; /* Adjust font size */
+        box-shadow: 0px 0px 2px rgba(122, 50, 144, 0.7), 0px 0px 10px rgba(122, 50, 144, 0.7);
+    }
+  
+    .social-icons {
+      width: 5vw; /* Increase width for smaller screens */
+      margin-top: 10rem;
+      font-size: 12px;
+    }
+  }
+  
