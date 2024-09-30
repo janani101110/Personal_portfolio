@@ -18,10 +18,13 @@ import cc from "./cc.png";
 import git from "./git.png";
 import figma from "./figma.png";
 import arduino from "./arduino.png";
+import Logo from './logo';
+
 
 export const Details = () => {
     return (
         <div className="details-container">
+      <div className="image-container"><Link to='/'><Logo/></Link></div>
            
             <div className="section-title" style={{fontSize:32}}>Janani Lasindu</div>
             <div className="section1">

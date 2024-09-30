@@ -6,11 +6,14 @@ import { FiGithub } from "react-icons/fi";
 import "./all.css";
 import { Link } from 'react-router-dom';
 import { FaMedium } from "react-icons/fa6";
+import Logo from './logo';
 
 
 export const Home = () => {
+
   return (
     <div className="container">
+      <div className="image-container"><Link to='/'><Logo/></Link></div>
       <div className="shape1"></div>
       <div className="shape2"></div>
       <div className="shape3"></div>

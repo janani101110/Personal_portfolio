@@ -2,7 +2,10 @@ import React from 'react';
 import './Acms.css'; // Import the CSS file
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { FaVideo } from "react-icons/fa";
+import Logo from './logo';
+import './all.css';
+import { Link } from 'react-router-dom';
+
 
 export const Acms = () => {
   const { pathname } = useLocation();
@@ -14,7 +17,8 @@ export const Acms = () => {
   return (
     <div className="acms-container">
       {/* Back arrow */}
-      
+      <div className="image-container"><Link to='/'><Logo/></Link></div>
+
 
       <div className="acms-title">
         Assistive Content Management System for Electronic Hobbyists
@@ -23,20 +27,20 @@ export const Acms = () => {
       <div className="acms-description">
         This is a website where an electronic project developer can get all the needed information and services from one place.
         <br/><br/>
-        <b>Key Contents :</b>
+        <b><h3>Key Contents :</h3></b>
+        
+        ✔️ Resources - Standard information and knowledge about electronic components and topics categorized into different categories like Sensors, Data sheets, PCB, Communication modules, etc. Registered users can add posts to this content and interact with them.
         <br/><br/>
-        Resources - Standard information and knowledge about electronic components and topics categorized into different categories like Sensors, Data sheets, PCB, Communication modules, etc. Registered users can add posts to this content and interact with them.
+        ✔️ Blogs - Blogs written by registered users about IoT topics.
         <br/><br/>
-        Blogs - Blogs written by registered users about IoT topics.
+        ✔️ Projects - Step-by-step guides on completed projects done by registered users, including circuit diagrams, PCB diagrams, and videos.
         <br/><br/>
-        Projects - Step-by-step guides on completed projects done by registered users, including circuit diagrams, PCB diagrams, and videos.
+        ✔️ Shop - Classified website where registered users can post advertisements to sell their electronic products.
         <br/><br/>
-        Shop - Classified website where registered users can post advertisements to sell their electronic products.
-        <br/><br/>
-        Forum - Questions and answers forum where registered users can contribute.
+        ✔️ Forum - Questions and answers forum where registered users can contribute.
         <br/><br/><br/>
-        <b>Key Features :</b>
-        <br/><br/>
+        <b><h3>Key Features :</h3></b>
+        
         ✔️ Google authenticated sign in and username/password sign in
         <br/><br/>
         ✔️ Multilingual support for Sinhala, Tamil, and English
@@ -47,15 +51,20 @@ export const Acms = () => {
         <br/><br/>
         ✔️ Admin panel exclusive for the admin
         <br/><br/><br/>
-        <b>Technologies :</b>
-        <br/><br/>
+
+
+
+        <b><h3>Technologies :</h3></b>
+        
         MERN Stack - MongoDB, Express.js, React.js, Node.js
         <br/><br/>
         API - Postman, ThunderClient, Google Translate, NodeMailer, etc.
         <br/><br/>
         Registered users can contribute to the website by creating posts, liking, unliking, reacting, commenting, deleting, updating, and sharing content.
         <br/><br/>
-        To view the full demonstration click <a href='https://www.linkedin.com/posts/janani-lasindu_webdevelopment-teamtrivia-activity-7218228185656700928-RKuO?utm_source=share&utm_medium=member_desktop'><FaVideo style={{fontSize:'12px'}}/></a> 
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QKtcWL_JXAU?si=U8O3xp1HWmRb9dz6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
       </div>
 
       

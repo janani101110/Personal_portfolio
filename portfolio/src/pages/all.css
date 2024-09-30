@@ -139,11 +139,33 @@
     left: 25%;
     transform: translate(-50%, -50%);
   }
+  .image-container {
+    
+  /* Auto height to maintain aspect ratio */
+  
+   /* Center the image horizontally */
+  /* Center the image vertically */
+  /* margin-bottom: 280px;
+  margin-right: 1300px; */
+  position: absolute;
+  top: 10px; /* Adjust for spacing from top */
+  left: 10px; /* Adjust for spacing from left */
+  width: 10vw;
+  height: auto;
+  object-fit: cover;
+  }
+  
+  
   
   /* Responsive media queries */
   @media (max-width: 768px) {
     .profile-picture {
         width: 25vw;
+    }
+    .image-container {
+      top: 5px;
+      left: 5px;
+      width: 5vm;
     }
   
     .shape1, .shape2, .shape3 {
@@ -176,6 +198,11 @@
   }
   
   @media (max-width: 480px) {
+    .image-container {
+      width: 50px;
+      margin-right: 350px; /* Reset margin on smaller screens */
+      margin-bottom: 280px; /* Adjust bottom margin */
+    }
     .profile-picture {
         width: 30vw;
         top: 25%;
@@ -229,6 +256,11 @@
   
   /* For very small mobile devices (up to 320px wide) */
   @media (max-width: 320px) {
+    .image-container {
+      width: 90px;
+      margin-right: 240px; /* Reset margin on smaller screens */
+      margin-bottom: 280px; /* Adjust margin for small screens */
+    }
     .profile-picture {
         width: 40vw; /* Increase width for smaller screens */
     }
